@@ -12,3 +12,4 @@ with open('sda.pdf', 'rb') as pdfFile:
     holdings = re.findall(r'([a-z A-Z \s]+)(?=\n)', body)
     for Topic in holdings:
         webbrowser.open_new_tab(f'http://google.com/search?q={Topic}')
+ 
