@@ -10,5 +10,5 @@ with open('sda.pdf', 'rb') as pdfFile:
     rex = re.compile("(?<=fungsi lagi :)(.*)", re.DOTALL)
     body = re.search(rex, text).group(0)
     holdings = re.findall(r'([a-z A-Z \s]+)(?=\n)', body)
-    for company in holdings:
-        webbrowser.open_new_tab(f'http://google.com/search?q={company}')
+    for Topic in holdings:
+        webbrowser.open_new_tab(f'http://google.com/search?q={Topic}')
